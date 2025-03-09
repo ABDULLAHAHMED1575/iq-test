@@ -1,221 +1,164 @@
-import React from 'react';
-import {Col, Row} from "antd";
+import React, {useEffect, useRef, useState} from 'react';
+import {Col, Radio, Row, Space} from "antd";
+import Question from "./questions.json"
+import Swal from "sweetalert2";
 
-import { Footer } from 'flowbite-react';
-import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 
 
 const Index = () => {
+    const Ref = useRef(null);
+
+    const [score, setScore] = useState(0)
+    const [started, setStarted] = useState(false)
+    const [randomSelected, setRandomSelected] = useState([])
+    const [currentQuestion, setCurrentQuestion] = useState(0)
+    const [value, setValue] = useState("A")
+    const [timer, setTimer] = useState("15:00");
+
+
+    const getTimeRemaining = (e) => {
+        const total = Date.parse(e) - Date.parse(new Date());
+        const seconds = Math.floor((total / 1000) % 60);
+        const minutes = Math.floor(
+            (total / 1000 / 60) % 60
+        );
+        return {
+            total,
+            minutes,
+            seconds,
+        };
+    };
+
+    const startTimer = (e) => {
+        let { total, minutes, seconds } = getTimeRemaining(e);
+        if (total >= 0) {
+            setTimer((minutes > 9 ? minutes : "0" + minutes) + ":" + (seconds > 9 ? seconds : "0" + seconds)
+            );
+        }
+    };
+
+    const clearTimer = (e) => {
+        setTimer("15:00");
+        if (Ref.current) clearInterval(Ref.current);
+        const id = setInterval(() => {
+            startTimer(e);
+        }, 1000);
+        Ref.current = id;
+    };
+
+    const stopTime = (e) => {
+        if (Ref.current) clearInterval(Ref.current);
+    };
+
+    const getDeadTime = () => {
+        let deadline = new Date();
+        deadline.setSeconds(deadline.getSeconds() + 900);
+        return deadline;
+    };
+
+    useEffect(() => {
+        if(timer === "00:00"){
+            setStarted(false)
+            Swal.fire({
+                title: "Time Up",
+                text: "You were not able to complete the test in time.",
+                icon: "error"
+            });
+        }
+    }, [timer]);
+
+
     return (<div className="w-full h-screen">
-        <Row gutter={[16, 48]} className="bg-[#EDF7F8]">
-            <Col xs={0} sm={0} md={4} lg={4} xl={4}></Col>
-            <Col xs={24} sm={24} md={16} lg={16} xl={16}>
-                <div className="w-full h-full flex flex-col justify-center align-middle" style={{alignItems: "center"}}>
-                        <span className="text-6xl font-black mb-5">
-                            Try free the best
-                        </span>
-                    <span className="text-6xl font-black mb-5">
-                            IQ Test online
-                        </span>
-                    <p className="max-w-xl text-center text-xl mb-9">
-                        Take the only IQ Test online led by real psychologists and discover your IQ while growing your
-                        intelligence through learning. How could it be better?
-                    </p>
-                    <button className="bg-[#69B5C3] text-white px-10 py-3 rounded-full text-xl font-bold mb-9">
-                        Start IQ Test
-                    </button>
-                    <img src="heros_section.png" alt="heros_section.png" className="mb-9"/>
-                    <span className="text-2xl font-bold mb-5 text-center">
-                            Accurate IQ Test with a comprehensive evaluation
-                        </span>
-                    <Row gutter={[16, 48]} className="w-full">
-                        <Col xs={24} sm={24} md={8} lg={8} xl={8}>
-                            <div className="flex flex-col justify-center align-middle" style={{alignItems: "center"}}>
-                                <img src="part1.png" alt="icon1.png" className="mb-5"/>
-                                <span className="text-xl font-bold mb-5">
-                                        10 Questions
-                                    </span>
-                                <div className="w-full border-b-2 border-b-gray-200 px-6 mb-5"></div>
-                                <span className="w-[200px] text-md mb-9">
-                                        Each part tests a different ability of fluid intelligence. That way the test can be far more precise computing your exact IQ score.
-                                    </span>
+        <Row gutter={[16, 48]} className="bg-[#EDF7F8] w-full h-full flex flex-row justify-center"
+             style={{alignItems: 'center'}}>
+            <Col xs={24} sm={24} md={20} lg={16} xl={16} className="w-full h-full mt-8">
+                {!started ?
+                    <div className="flex flex-col justify-center align-middle bg-white shadow-2xl rounded-md p-5"
+                         style={{alignItems: "center"}}>
+                    <span className="text-2xl font-black mb-5">
+                        Get Ready to Test Your IQ
+                    </span>
+                        <p className="mb-5 px-16">
+                            IQ testing is a widely used method to measure cognitive abilities and problem-solving
+                            skills. To begin your IQ test, simply click on the "Start IQ Test" button. These assessments
+                            typically consist of a series of questions designed to evaluate your logical reasoning,
+                            mathematical aptitude, verbal comprehension, and spatial awareness. IQ tests are valuable
+                            tools for assessing intellectual potential and identifying areas of strength and
+                            improvement, helping individuals gain a better understanding of their cognitive abilities
+                            and aiding educators and psychologists in tailoring educational and developmental strategies
+                            to meet specific needs.
+                        </p>
+                        <button className="bg-[#69B5C3] text-white px-10 py-3 rounded-full text-xl font-bold mb-9"
+                                onClick={() => {
+                                    shuffleArray(Question)
+                                    setRandomSelected(Question.slice(0, 15))
+                                    setStarted(true)
+                                    clearTimer(getDeadTime());
+                                }}
+                        >
+                            Start IQ Test
+                        </button>
+                    </div> : <div className="flex flex-col bg-white shadow-2xl rounded-md p-5">
+                        <div className="flex flex-row w-full mb-5">
+                            <div className="flex justify-start w-1/2">
+                                Question: {currentQuestion+1}/15
                             </div>
-                        </Col>
-                        <Col xs={24} sm={24} md={8} lg={8} xl={8}>
-                            <div className="flex flex-col justify-center align-middle" style={{alignItems: "center"}}>
-                                <img src="part2.png" alt="icon1.png" className="mb-5"/>
-                                <span className="text-xl font-bold mb-5">
-                                        Average duration of 15 minutes
-                                    </span>
-                                <div className="w-full border-b-2 border-b-gray-200 px-6 mb-5"></div>
-                                <span className="w-[200px] text-md mb-9">
-                                        Every section is time-boxed to 10 minutes. So go as fast as you can, but with a balanced approach. Mistakes don't sum and later questions will be more difficult.
-                                    </span>
-                            </div>
-                        </Col>
-                        <Col xs={24} sm={24} md={8} lg={8} xl={8}>
-                            <div className="flex flex-col justify-center align-middle" style={{alignItems: "center"}}>
-                                <img src="part3.png" alt="icon1.png" className="mb-5"/>
-                                <span className="text-xl font-bold mb-5">
-                                        Questions with growing difficulty
-                                    </span>
-                                <div className="w-full border-b-2 border-b-gray-200 px-6 mb-5"></div>
-                                <span className="w-[200px] text-md mb-9">
-                                        The questions will get harder the closer you are to the end of the section. Do not panic when it gets too complicated. Just try your best guess. Intuition is more powerful than you think.
-                                    </span>
-                            </div>
-                        </Col>
-                    </Row>
-                    <button className="bg-[#69B5C3] text-white px-10 py-3 rounded-full text-xl font-bold mb-9">
-                        Start IQ Test
-                    </button>
-                </div>
-            </Col>
-            <Col xs={0} sm={0} md={4} lg={4} xl={4}></Col>
-        </Row>
-        <Row gutter={[16, 48]} className="bg-white border-b-2 border-b-gray-200 p-5">
-            <Col xs={0} sm={0} md={4} lg={4} xl={4}></Col>
-            <Col xs={24} sm={24} md={16} lg={16} xl={16}>
-                <div className="w-full h-full flex flex-col justify-center align-middle" style={{alignItems: "center"}}>
-                    <div className="mt-12 mb-5">
-                            <span className="text-2xl font-black text-center mb-5">
-                                Everything you
-                            </span>&nbsp;
-                        <span className="text-2xl font-black text-center mb-5 border-b-4 border-b-[#69B5C3]">
-                                wished
-                            </span>&nbsp;
-                        <span className="text-2xl font-black text-center mb-5">
-                                for an IQ Test
-                            </span>
-                    </div>
-                    <Row className="w-full mt-12">
-                        <Col xs={24} sm={24} md={12} lg={12} xl={12}>
-                            <div className="flex flex-col p-8">
-                                <span className="text-2xl font-black">DISCOVER</span>
-                                <span className="text-2xl font-black text-[#69B5C3] mb-5">your intelligence</span>
-                                <p className="text-xl ">Find out your exact IQ and IQ range. Or break down your score by test sections with a powerful complete statistical analysis. Compare with other people with percentiles, IQ ranges and position your score in the Bell Curve.</p>
-                            </div>
-                            <div className="flex flex-col justify-center" style={{alignItems: "center"}}>
-                                <button className="bg-[#69B5C3] text-white px-10 py-3 rounded-full text-xl font-bold mb-9">
-                                    Start IQ Test
-                                </button>
-                            </div>
-                        </Col>
-                        <Col xs={24} sm={24} md={12} lg={12} xl={12}>
-                            <img src="report.png" style={{"width": "300px"}} alt=""/>
-                        </Col>
-                    </Row>
-                </div>
-            </Col>
-            <Col xs={0} sm={0} md={4} lg={4} xl={4}></Col>
-        </Row>
-        <Row gutter={[16, 48]} className="bg-[#EDF7F8] border-b-2 border-b-gray-200 p-5">
-            <Col xs={0} sm={0} md={4} lg={4} xl={4}></Col>
-            <Col xs={24} sm={24} md={16} lg={16} xl={16}>
-                <Row gutter={[16, 48]} className="w-full">
-                    <Col xs={24} sm={24} md={8} lg={8} xl={8} className="p-5">
-                        <div className="bg-[#69B6C3] rounded-md shadow-2xl p-8 h-full">
-                            <div className="flex flex-col justify-center align-middle" style={{alignItems: "center"}}>
-                                <span className="text-4xl text-white font-black mb-5">
-                                    FREE to Start
-                                </span>
-                                <span className="text-xl text-white font-bold">
-                                    Try you IQ Test for free
-                                </span>
-                                <span className="text-xl text-white font-bold">
-                                    Check Results
-                                </span>
+                            <div className="flex justify-end w-1/2">
+                                Time Remaining: {timer}
                             </div>
                         </div>
-                    </Col>
-                    <Col xs={24} sm={24} md={8} lg={8} xl={8} className="p-5">
-                        <div className="bg-[#69B6C3] rounded-md shadow-2xl p-8 h-full">
-                            <div className="flex flex-col justify-center align-middle" style={{alignItems: "center"}}>
-                                <span className="text-4xl text-white font-black mb-5">
-                                    Basic
-                                </span>
-                                <span className="text-xl text-white font-bold">
-                                    Certificate
-                                </span>
-                                <span className="text-xl text-white font-bold">
-                                    Detail Report
-                                </span>
-                            </div>
+                        <span className="text-lg font-bold">
+                            {randomSelected[currentQuestion].question}
+                        </span>
+                        <Radio.Group
+                            onChange={(e) => {
+                                setValue(e.target.value)
+                            }}
+                            value={value}
+
+                        >
+                            <Space direction="vertical">
+                                <Radio value="A">{randomSelected[currentQuestion].A}</Radio>
+                                <Radio value="B">{randomSelected[currentQuestion].B}</Radio>
+                                <Radio value="C">{randomSelected[currentQuestion].C}</Radio>
+                                <Radio value="D">{randomSelected[currentQuestion].D}</Radio>
+                            </Space>
+                        </Radio.Group>
+                        <div className="flex flex-row justify-end">
+                            <button className="bg-[#69B5C3] text-white px-10 py-3 rounded-md text-md font-bold mb-2"
+                                    onClick={() => {
+                                        if (value === randomSelected[currentQuestion].answer) {
+                                            setScore(score + 1)
+                                        }
+                                        if (currentQuestion === 14) {
+                                            setStarted(false)
+                                            Swal.fire({
+                                                title: "Test Completed",
+                                                text: "Your score is " + score + "/15",
+                                                icon: "success"
+                                            });
+                                            stopTime()
+                                            setScore(0)
+                                            setCurrentQuestion(0)
+                                        }else {
+                                            setCurrentQuestion(currentQuestion + 1)
+                                        }
+                                        setValue("A")
+                                    }}
+                            >
+                                {currentQuestion === 14 ? "Submit" : "Next"}
+                            </button>
                         </div>
-                    </Col>
-                    <Col xs={24} sm={24} md={8} lg={8} xl={8} className="p-5">
-                        <div className="bg-[#69B6C3] rounded-md shadow-2xl p-8">
-                            <div className="flex flex-col justify-center align-middle" style={{alignItems: "center"}}>
-                                <span className="text-4xl text-white font-black mb-5">
-                                    Premium
-                                </span>
-                                <span className="text-xl text-white font-bold">
-                                    Certificate
-                                </span>
-                                <span className="text-xl text-white font-bold">
-                                    Detail Report
-                                </span>
-                                <span className="text-xl text-white font-bold">
-                                    Answer Explained
-                                </span>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
+                    </div>}
             </Col>
-            <Col xs={0} sm={0} md={4} lg={4} xl={4}></Col>
         </Row>
-        <Footer bgDark>
-            <div className="w-full">
-                <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
-                    <div>
-                        <Footer.Title title="Company" />
-                        <Footer.LinkGroup col>
-                            <Footer.Link href="#">About</Footer.Link>
-                            <Footer.Link href="#">Careers</Footer.Link>
-                            <Footer.Link href="#">Brand Center</Footer.Link>
-                            <Footer.Link href="#">Blog</Footer.Link>
-                        </Footer.LinkGroup>
-                    </div>
-                    <div>
-                        <Footer.Title title="help center" />
-                        <Footer.LinkGroup col>
-                            <Footer.Link href="#">Discord Server</Footer.Link>
-                            <Footer.Link href="#">Twitter</Footer.Link>
-                            <Footer.Link href="#">Facebook</Footer.Link>
-                            <Footer.Link href="#">Contact Us</Footer.Link>
-                        </Footer.LinkGroup>
-                    </div>
-                    <div>
-                        <Footer.Title title="legal" />
-                        <Footer.LinkGroup col>
-                            <Footer.Link href="#">Privacy Policy</Footer.Link>
-                            <Footer.Link href="#">Licensing</Footer.Link>
-                            <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
-                        </Footer.LinkGroup>
-                    </div>
-                    <div>
-                        <Footer.Title title="download" />
-                        <Footer.LinkGroup col>
-                            <Footer.Link href="#">iOS</Footer.Link>
-                            <Footer.Link href="#">Android</Footer.Link>
-                            <Footer.Link href="#">Windows</Footer.Link>
-                            <Footer.Link href="#">MacOS</Footer.Link>
-                        </Footer.LinkGroup>
-                    </div>
-                </div>
-                <div className="w-full bg-gray-700 px-4 py-6 sm:flex sm:items-center sm:justify-between">
-                    <Footer.Copyright href="#" by="BrainTesting™" year={2022} />
-                    <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-                        <Footer.Icon href="#" icon={BsFacebook} />
-                        <Footer.Icon href="#" icon={BsInstagram} />
-                        <Footer.Icon href="#" icon={BsTwitter} />
-                        <Footer.Icon href="#" icon={BsGithub} />
-                        <Footer.Icon href="#" icon={BsDribbble} />
-                    </div>
-                </div>
-            </div>
-        </Footer>
     </div>);
 };
 

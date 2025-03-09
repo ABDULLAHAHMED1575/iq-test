@@ -1,0 +1,562 @@
+[
+  {
+    "question": "What comes next in the sequence: 2, 3, 5, 8, 13, ...?",
+    "answer": "B",
+    "A": "17",
+    "B": "21",
+    "C": "18",
+    "D": "20"
+  },
+  {
+    "question": "If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops definitely Lazzies?",
+    "answer": "A",
+    "A": "Yes",
+    "B": "No",
+    "C": "Cannot be determined",
+    "D": "None of the above"
+  },
+  {
+    "question": "Choose the figure that completes the pattern: [1, 6, 3, 8, 5, ?]",
+    "answer": "C",
+    "A": "11",
+    "B": "12",
+    "C": "10",
+    "D": "14"
+  },
+  {
+    "question": "Which number should come next in the pattern: 37, 34, 31, 28?",
+    "answer": "D",
+    "A": "2",
+    "B": "26",
+    "C": "24",
+    "D": "25"
+  },
+  {
+    "question": "What is to 10 as 5 is to 25?",
+    "answer": "B",
+    "A": "10",
+    "B": "50",
+    "C": "125",
+    "D": "2"
+  },
+  {
+    "question": "If you rearrange the letters 'CIFAIPC' you would have the name of a(n):",
+    "answer": "A",
+    "A": "Ocean",
+    "B": "Country",
+    "C": "City",
+    "D": "Animal"
+  },
+  {
+    "question": "Mary, who is sixteen years old, is four times as old as her brother. How old will Mary be when she is twice as old as her brother?",
+    "answer": "D",
+    "A": "20",
+    "B": "24",
+    "C": "22",
+    "D": "24"
+  },
+  {
+    "question": "If you fold a cube's net into a cube, which of the following pairs of numbers will be on opposite sides: 1-6, 2-4, 3-5?",
+    "answer": "C",
+    "A": "1-6",
+    "B": "2-4",
+    "C": "3-5",
+    "D": "None of the above"
+  },
+  {
+    "question": "What is half of a quarter of 400?",
+    "answer": "A",
+    "A": "50",
+    "B": "100",
+    "C": "200",
+    "D": "25"
+  },
+  {
+    "question": "If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?",
+    "answer": "B",
+    "A": "100 minutes",
+    "B": "5 minutes",
+    "C": "1 minute",
+    "D": "20 minutes"
+  },
+  {
+    "question": "Which word does not belong in the following list: Stop, Cop, Mop, Shop, Crop, Drop?",
+    "answer": "B",
+    "A": "Stop",
+    "B": "Shop",
+    "C": "Crop",
+    "D": "Drop"
+  },
+  {
+    "question": "What number best completes the analogy: 8:4 as 10:?",
+    "answer": "C",
+    "A": "3",
+    "B": "5",
+    "C": "5",
+    "D": "6"
+  },
+  {
+    "question": "In a marathon race, Tom overtakes the second runner. What position is Tom in now?",
+    "answer": "B",
+    "A": "First",
+    "B": "Second",
+    "C": "Third",
+    "D": "Fourth"
+  },
+  {
+    "question": "If you rearrange the letters 'LNGEDNA', you have the name of a:",
+    "answer": "D",
+    "A": "Animal",
+    "B": "Country",
+    "C": "State",
+    "D": "Country"
+  },
+  {
+    "question": "If two typists can type two pages in two minutes, how many typists will it take to type 18 pages in six minutes?",
+    "answer": "A",
+    "A": "6",
+    "B": "3",
+    "C": "9",
+    "D": "12"
+  },
+  {
+    "question": "What comes next in the series: JFMAMJJASON_?",
+    "answer": "D",
+    "A": "J",
+    "B": "M",
+    "C": "A",
+    "D": "D"
+  },
+  {
+    "question": "If all Wargs are Targs, and some Targs are Rargs, then some Wargs are definitely Rargs. Is this statement True or False?",
+    "answer": "B",
+    "A": "True",
+    "B": "False",
+    "C": "Cannot be determined",
+    "D": "None of the above"
+  },
+  {
+    "question": "A clock reads 3:15. What is the angle between the hour and the minute hands?",
+    "answer": "C",
+    "A": "0 degrees",
+    "B": "7.5 degrees",
+    "C": "7.5 degrees",
+    "D": "15 degrees"
+  },
+  {
+    "question": "If you write all the numbers from 300 to 400, how many times do you write the number 3?",
+    "answer": "A",
+    "A": "120",
+    "B": "100",
+    "C": "110",
+    "D": "130"
+  },
+  {
+    "question": "If a peacock lays an egg on the top of a hill and if the hill is sloping to the west, in which direction will the egg roll?",
+    "answer": "B",
+    "A": "East",
+    "B": "Peacocks don't lay eggs",
+    "C": "West",
+    "D": "North"
+  },
+  {
+    "question": "If you are running a race and you pass the person in second place, what place are you in now?",
+    "answer": "B",
+    "A": "First",
+    "B": "Second",
+    "C": "Third",
+    "D": "Fourth"
+  },
+  {
+    "question": "A farmer has 17 sheep, all but 9 die. How many are left?",
+    "answer": "C",
+    "A": "8",
+    "B": "9",
+    "C": "9",
+    "D": "17"
+  },
+  {
+    "question": "What is the next number in the sequence: 4, 9, 16, 25, ...?",
+    "answer": "A",
+    "A": "36",
+    "B": "32",
+    "C": "34",
+    "D": "40"
+  },
+  {
+    "question": "If it takes 20 minutes to hard-boil 1 egg, how long will it take to hard-boil 3 eggs?",
+    "answer": "B",
+    "A": "60 minutes",
+    "B": "20 minutes",
+    "C": "40 minutes",
+    "D": "30 minutes"
+  },
+  {
+    "question": "If you spell 'SIT IN THE CORNER' backwards, which word is spelled the same forwards and backwards?",
+    "answer": "D",
+    "A": "SIT",
+    "B": "IN",
+    "C": "THE",
+    "D": "IN"
+  },
+  {
+    "question": "What is unusual about this sentence: 'The quick brown fox jumps over the lazy dog'?",
+    "answer": "A",
+    "A": "It uses every letter of the alphabet",
+    "B": "There is no verb",
+    "C": "It contains all prime numbers",
+    "D": "Nothing is unusual"
+  },
+  {
+    "question": "How many months have 28 days?",
+    "answer": "D",
+    "A": "1",
+    "B": "2",
+    "C": "6",
+    "D": "12"
+  },
+  {
+    "question": "If you divide 30 by half and add 10, what is the result?",
+    "answer": "C",
+    "A": "25",
+    "B": "20",
+    "C": "70",
+    "D": "15"
+  },
+  {
+    "question": "A boy and a doctor went fishing. The boy is the doctor's son, but the doctor is not the boy's father. Who is the doctor?",
+    "answer": "A",
+    "A": "The boy's mother",
+    "B": "The boy's grandfather",
+    "C": "The boy's uncle",
+    "D": "The boy's brother"
+  },
+  {
+    "question": "I am an odd number. Take away one letter and I become even. What number am I?",
+    "answer": "B",
+    "A": "7",
+    "B": "7",
+    "C": "9",
+    "D": "11"
+  },
+  {
+    "question": "A sundial has the fewest moving parts of any timepiece. Which has the most?",
+    "answer": "C",
+    "A": "Digital clock",
+    "B": "Hourglass",
+    "C": "Grandfather clock",
+    "D": "Stopwatch"
+  },
+  {
+    "question": "What is the next letter in the sequence: O, T, T, F, F, S, S, ...?",
+    "answer": "B",
+    "A": "H",
+    "B": "E",
+    "C": "N",
+    "D": "T"
+  },
+  {
+    "question": "If you have only one match and you entered a dark room containing an oil lamp, some kindling wood, and a newspaper, which would you light first?",
+    "answer": "D",
+    "A": "Oil lamp",
+    "B": "Kindling wood",
+    "C": "Newspaper",
+    "D": "The match"
+  },
+  {
+    "question": "Forward I am heavy, but backward I am not. What am I?",
+    "answer": "A",
+    "A": "Ton",
+    "B": "Stone",
+    "C": "Metal",
+    "D": "Feather"
+  },
+  {
+    "question": "If you throw a red stone into the blue sea, what will it become?",
+    "answer": "B",
+    "A": "It will become blue",
+    "B": "It will become wet",
+    "C": "It will sink",
+    "D": "It will float"
+  },
+  {
+    "question": "A is the father of B. But B is not the son of A. How’s that possible?",
+    "answer": "C",
+    "A": "Adopted",
+    "B": "Stepfather",
+    "C": "B is A's daughter",
+    "D": "It's a riddle"
+  },
+  {
+    "question": "The day before yesterday I was 21, and next year I will be 24. When is my birthday?",
+    "answer": "A",
+    "A": "December 31",
+    "B": "January 1",
+    "C": "February 29",
+    "D": "It cannot be determined"
+  },
+  {
+    "question": "What can point in every direction but can't reach the destination by itself?",
+    "answer": "C",
+    "A": "Compass",
+    "B": "Clock",
+    "C": "Your finger",
+    "D": "Road sign"
+  },
+  {
+    "question": "What word in the English language does the following: the first two letters signify a male, the first three letters signify a female, the first four letters signify a great, while the entire world signifies a great woman. What is the word?",
+    "answer": "D",
+    "A": "Heroine",
+    "B": "Woman",
+    "C": "Lady",
+    "D": "Heroine"
+  },
+  {
+    "question": "Which word does not belong in this list: Apple, Grape, Banana, Cherry, Pear",
+    "answer": "A",
+    "A": "Banana",
+    "B": "Grape",
+    "C": "Cherry",
+    "D": "Pear"
+  },
+  {
+    "question": "If you rearrange the letters 'RATINE', you would have the name of a:",
+    "answer": "B",
+    "A": "Country",
+    "B": "Animal",
+    "C": "City",
+    "D": "River"
+  },
+  {
+    "question": "What can travel around the world while staying in a corner?",
+    "answer": "A",
+    "A": "A stamp",
+    "B": "The wind",
+    "C": "A plane",
+    "D": "Light"
+  },
+  {
+    "question": "What comes next in the sequence: 7, 10, 8, 11, 9, 12, ...?",
+    "answer": "C",
+    "A": "12",
+    "B": "13",
+    "C": "10",
+    "D": "11"
+  },
+  {
+    "question": "Which number should be replaced by the question mark? 8, 13, 20, ?, 40, 52",
+    "answer": "D",
+    "A": "27",
+    "B": "28",
+    "C": "29",
+    "D": "28"
+  },
+  {
+    "question": "What appears once in a minute, twice in a moment, but never in a thousand years?",
+    "answer": "C",
+    "A": "The number 1",
+    "B": "Time",
+    "C": "The letter M",
+    "D": "Light"
+  },
+  {
+    "question": "A girl has as many brothers as sisters, but each brother has only half as many brothers as sisters. How many brothers and sisters are there in the family?",
+    "answer": "A",
+    "A": "Four sisters and three brothers",
+    "B": "Three sisters and two brothers",
+    "C": "Five sisters and four brothers",
+    "D": "Two sisters and one brother"
+  },
+  {
+    "question": "In a certain language, 'RAP' means 'song'. What does 'PAR' mean in the same language?",
+    "answer": "D",
+    "A": "Sing",
+    "B": "Music",
+    "C": "Dance",
+    "D": "Song"
+  },
+  {
+    "question": "If you add the age of a man to the age of his wife, the sum is 91. He is now twice as old as she was when he was as old as she is now. How old is the wife?",
+    "answer": "B",
+    "A": "45",
+    "B": "41",
+    "C": "46",
+    "D": "50"
+  },
+  {
+    "question": "A ladder hangs over the side of a ship anchored in a port. The bottom rung touches the water. The distance between rungs is 20 cm and the length of the ladder is 180 cm. The tide is rising at a rate of 15 cm per hour. When will the water reach the seventh rung from the top?",
+    "answer": "C",
+    "A": "After 2 hours",
+    "B": "After 4 hours",
+    "C": "Never",
+    "D": "After 6 hours"
+  },
+  {
+    "question": "What has keys but can't open locks?",
+    "answer": "D",
+    "A": "A map",
+    "B": "A code",
+    "C": "A puzzle",
+    "D": "A piano"
+  },
+  {
+    "question": "Which word is the odd one out: First, Second, Third, Forth, Fifth, Sixth, Seventh, Eighth?",
+    "answer": "C",
+    "A": "Third",
+    "B": "Fifth",
+    "C": "Forth",
+    "D": "Seventh"
+  },
+  {
+    "question": "What is the next letter in the sequence: Z, A, Y, B, X, C, W, ...?",
+    "answer": "D",
+    "A": "D",
+    "B": "V",
+    "C": "X",
+    "D": "D"
+  },
+  {
+    "question": "If a leaf falls to the ground in a forest and no one hears it, does it make a sound?",
+    "answer": "A",
+    "A": "Yes",
+    "B": "No",
+    "C": "It depends",
+    "D": "Cannot be determined"
+  },
+  {
+    "question": "What comes next in the sequence: 1, 1, 2, 3, 5, 8, 13, ...?",
+    "answer": "B",
+    "A": "20",
+    "B": "21",
+    "C": "34",
+    "D": "26"
+  },
+  {
+    "question": "Which one of the five is least like the other four: Dog, Mouse, Lion, Snake, Elephant?",
+    "answer": "D",
+    "A": "Dog",
+    "B": "Mouse",
+    "C": "Lion",
+    "D": "Snake"
+  },
+  {
+    "question": "If you rearrange the letters 'CIFAIPC' you have the name of a:",
+    "answer": "C",
+    "A": "Animal",
+    "B": "Country",
+    "C": "City",
+    "D": "Ocean"
+  },
+  {
+    "question": "A is the father of B. But B is not the son of A. How’s that possible?",
+    "answer": "C",
+    "A": "B is A's uncle",
+    "B": "B is A's brother",
+    "C": "B is A's daughter",
+    "D": "None of the above"
+  },
+  {
+    "question": "What comes next in the sequence: M, A, M, J, J, A, S, O, ...?",
+    "answer": "D",
+    "A": "N",
+    "B": "D",
+    "C": "J",
+    "D": "N"
+  },
+  {
+    "question": "Which one of the numbers does not belong in the following series: 2, 3, 6, 7, 8, 14, 15, 30?",
+    "answer": "B",
+    "A": "Three",
+    "B": "Eight",
+    "C": "Fifteen",
+    "D": "Thirty"
+  },
+  {
+    "question": "If you divide 30 by half and add 10, what is the result?",
+    "answer": "C",
+    "A": "25",
+    "B": "20",
+    "C": "70",
+    "D": "15"
+  },
+  {
+    "question": "Which number logically follows this sequence: 4, 6, 9, 6, 14, 6, ...?",
+    "answer": "C",
+    "A": "17",
+    "B": "19",
+    "C": "6",
+    "D": "21"
+  },
+  {
+    "question": "If you spell out numbers, how many letters are used in spelling out 1 to 100?",
+    "answer": "B",
+    "A": "Three hundred and sixty-four",
+    "B": "Eight hundred and sixty-four",
+    "C": "Nine hundred and ninety-nine",
+    "D": "One thousand and twenty-four"
+  },
+  {
+    "question": "What common English verb becomes its own past tense by rearranging its letters?",
+    "answer": "A",
+    "A": "Eat",
+    "B": "Run",
+    "C": "Jump",
+    "D": "Play"
+  },
+  {
+    "question": "What comes next? 10, 4, 3, 11, 15, ...",
+    "answer": "D",
+    "A": "4",
+    "B": "5",
+    "C": "12",
+    "D": "19"
+  },
+  {
+    "question": "If you write numbers from 1 to 100, how many times do you write the digit 3?",
+    "answer": "C",
+    "A": "11",
+    "B": "18",
+    "C": "20",
+    "D": "21"
+  },
+  {
+    "question": "What comes next in the sequence: S, M, H, D, W, M, ...?",
+    "answer": "B",
+    "A": "Y",
+    "B": "Y",
+    "C": "T",
+    "D": "S"
+  },
+  {
+    "question": "If you turn a right-handed glove inside out, it fits on which hand?",
+    "answer": "A",
+    "A": "Left hand",
+    "B": "Right hand",
+    "C": "Both hands",
+    "D": "Neither hand"
+  },
+  {
+    "question": "Which word in the dictionary is spelled incorrectly?",
+    "answer": "C",
+    "A": "Encyclopedia",
+    "B": "Misspell",
+    "C": "Incorrectly",
+    "D": "Dictionary"
+  },
+  {
+    "question": "What is the maximum number of times a single page of a newspaper can be folded in half by hand?",
+    "answer": "D",
+    "A": "12",
+    "B": "10",
+    "C": "7",
+    "D": "It varies"
+  },
+  {
+    "question": "Two fathers and two sons go fishing. Each of them catches one fish. So why do they bring home only three fish?",
+    "answer": "B",
+    "A": "One fish got away",
+    "B": "There are only three people: a grandfather, a father, and a son",
+    "C": "They shared the fish",
+    "D": "One fish was too small"
+  }
+]
